@@ -1,25 +1,34 @@
 import React from 'react';
+import images from '../../theme/images';
+import Header from '../Header';
 
 const Home: React.FC = () => {
     return (
-        <div className="bg-gray-100 py-20">
-            <div className="container mx-auto px-4">
-                <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-                    <p className="text-lg mb-8">
-                        Hi, I'm <span className="font-bold">[Your Name]</span>, a passionate <span className="font-bold">[Your Role/Title]</span> with expertise in{' '}
-                        <span className="font-bold">[Your Expertise]</span>.
-                    </p>
-                    <p className="text-lg mb-8">
-                        I specialize in <span className="font-bold">[Your Specializations]</span>. With a strong background in <span className="font-bold">[Your Background]</span>, I strive to{' '}
-                        <span className="font-bold">[Your Goal or Mission]</span>.
-                    </p>
-                    <p className="text-lg mb-8">Feel free to explore my projects, skills, and get in touch to discuss collaboration opportunities.</p>
-                    <a href="#contact" className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Contact Me
-                    </a>
+        <div>
+            <section className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${images.VhianneRoman})` }}>
+                <div className="absolute top-0 left-0 w-full">
+                    <Header />
                 </div>
-            </div>
+                <div className="container mx-auto flex items-center justify-end h-full">
+                    <div className="max-w-lg p-8 bg-black bg-opacity-50 text-white relative">
+                        <h1 className="text-4xl md:text-6xl font-semibold leading-none tracking-tighter font-serif">
+                            Welcome to <br />
+                            <span className="text-yellow-500">
+                                Vhi's Portfolio, <br />
+                            </span>{' '}
+                            I am a Software Engineer.
+                        </h1>
+                        <br />
+                        <div className="flex flex-col gap-4">
+                            <div className="flex gap-4">
+                                <a href="/about" className="bg-black text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-800" style={{ width: '200px', textAlign: 'center' }}>
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
