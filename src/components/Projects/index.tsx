@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player';
 const Projects: React.FC = () => {
     const thesisProjects = [
         {
-            title: 'Grade 10 School Website',
+            title: 'School Website',
             description:
                 'A web application was developed using PHP and MySQL, serving to user roles including admin, guest, students, and teachers. With navigation features, users can seamlessly access sections such as home, accounts, forum, files, profile, and logout. As an assistant programmer, I contributed to the development of this dynamic platform, ensuring smooth functionality and a user-friendly interface.',
             type: 'screenshot',
