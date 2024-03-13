@@ -12,19 +12,20 @@ import SpringBootIcon from '../assets/icons/spring-boot.png';
 import LiquibaseIcon from '../assets/icons/liquibase.png';
 import TailwindCssIcon from '../assets/icons/tailwind-css.png';
 
-
-export default {
-    JavaScriptIcon, 
+const icons = {
+    JavaScriptIcon,
     TypeScriptIcon,
     HTMLIcon,
     CSSIcon,
     PythonIcon,
     JavaIcon,
     MySQLIcon,
-    PhpIcon, 
+    PhpIcon,
     ReactIcon,
     ReduxIcon,
     SpringBootIcon,
     LiquibaseIcon,
     TailwindCssIcon
 };
+
+export default icons;
