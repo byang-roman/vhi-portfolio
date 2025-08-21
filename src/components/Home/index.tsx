@@ -6,25 +6,21 @@ const Home: React.FC = () => {
     return (
         <div>
             <section className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${images.VhianneRoman})` }}>
+                {/* Header */}
                 <div className="absolute top-0 left-0 w-full">
                     <Header />
                 </div>
-                <div className="container mx-auto flex items-center justify-end h-full">
-                    <div className="max-w-lg p-8 bg-black bg-opacity-50 text-white relative">
-                        <h1 className="text-4xl md:text-6xl font-semibold leading-none tracking-tighter font-serif">
-                            Welcome to <br />
-                            <span className="text-yellow-500">
-                                Vhi's Portfolio, <br />
-                            </span>{' '}
-                            I am a Software Engineer.
-                        </h1>
-                        <br />
-                        <div className="flex flex-col gap-4">
-                            <div className="flex gap-4">
-                                <a href="/about" className="bg-black text-white py-2 px-4 rounded-md transition duration-300 hover:bg-gray-800" style={{ width: '200px', textAlign: 'center' }}>
-                                    Learn More
-                                </a>
-                            </div>
+
+                {/* Right Panel */}
+                <div className="absolute top-0 right-0 h-full w-full md:w-1/2 flex items-center bg-black bg-opacity-80 text-white shadow-lg border-l-4 border-blue-500">
+                    <div className="p-12 w-full">
+                        <p className="text-3xl md:text-6xl font-semibold leading-none tracking-tighter font-serif">Vhianne Nicole Roman</p>
+                        <p className="text-2xl md:text-4xl font-serif mt-4">Web Developer and Video Editor</p>
+
+                        <div className="mt-10">
+                            <a href="/about" className="bg-blue-500 text-black font-semibold py-2 px-6 rounded-md hover:bg-blue-600 transition">
+                                LEARN MORE
+                            </a>
                         </div>
                     </div>
                 </div>
