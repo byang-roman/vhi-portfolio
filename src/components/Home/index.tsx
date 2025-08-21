@@ -5,6 +5,7 @@ import Header from '../Header';
 const Home: React.FC = () => {
     return (
         <div>
+            {/* Background Image */}
             <section className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${images.VhianneRoman})` }}>
                 {/* Header */}
                 <div className="absolute top-0 left-0 w-full">
