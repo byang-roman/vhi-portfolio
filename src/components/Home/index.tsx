@@ -1,6 +1,7 @@
 import React from 'react';
 import images from '../../theme/images';
 import Header from '../Header';
+import { Link } from 'react-scroll';
 
 const Home: React.FC = () => {
     return (
@@ -16,9 +17,9 @@ const Home: React.FC = () => {
                         <p className="text-2xl md:text-4xl font-serif mt-4">Web Developer and Video Editor</p>
 
                         <div className="mt-10">
-                            <a href="/about" className="bg-blue-500 text-black font-semibold py-2 px-6 rounded-md hover:bg-blue-600 transition">
+                            <Link to="about" smooth={true} duration={500} className="bg-blue-500 text-black font-semibold py-2 px-6 rounded-md hover:bg-blue-600 transition">
                                 LEARN MORE
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
