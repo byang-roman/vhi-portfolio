@@ -1,27 +1,60 @@
 import React from 'react';
 import Header from '../Header';
+import images from '../../theme/images';
 
 const About: React.FC = () => {
     return (
         <div>
             <Header />
-            <section className="bg-blue-100 text-blue-900 py-8 z-10 font-serif">
-                <div className="container mx-auto flex flex-col md:flex-row items-center max-w-6xl px-6 py-8">
-                    <div className="w-full py-8">
-                        <h1 className="text-4xl md:text-5xl font-semibold mb-4">About Me</h1>
+            {/* About Me */}
+            <section className="min-h-screen w-full py-20 bg-gradient-to-br from-black via-blue-950 to-blue-900">
+                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 text-gray-100">
+                    {/* Text Content */}
+                    <div>
+                        <h2 className="text-4xl font-serif font-semibold mb-6 relative inline-block text-white">
+                            About VHI
+                            <span className="absolute -bottom-2 left-0 w-48 h-1 bg-blue-500 rounded-full"></span>
+                        </h2>
 
-                        <p className="text-lg md:text-xl leading-relaxed mb-4">I started programming in Junior High and found my passion. That's where I began learning the basics of coding.</p>
-                        <p className="text-lg md:text-xl leading-relaxed mb-4">
-                            In college, I drew inspiration from my Junior High programming experiences. It was a way to showcase what I had learned and built upon since then.
+                        <p className="text-lg md:text-xl leading-relaxed mb-4 text-gray-300 text-justify">
+                            I built a foundation in programming early on and strengthened it through college, working on practical projects that shaped my approach to development. I prioritize writing
+                            clean, maintainable code and delivering fast, modern applications. By staying adaptable to new technologies, I ensure the solutions I create are efficient, scalable, and
+                            future-ready.
                         </p>
-                        <p className="text-lg md:text-xl leading-relaxed mb-4">
-                            Since then, I've been advancing my programming skills, always seeking new challenges. My experiences in Junior High and college have deeply shaped my passion for
-                            programming and pursuit of excellence.
-                        </p>
+
+                        {/* Connect Section */}
+                        <div className="flex flex-wrap gap-4 mt-6">
+                            <a href="mailto:youremail@example.com" className="px-5 py-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition flex items-center gap-2">
+                                Contact Me
+                            </a>
+                            <a
+                                href="https://github.com/yourprofile"
+                                target="_blank"
+                                className="px-5 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-900 transition flex items-center gap-2"
+                                rel="noreferrer"
+                            >
+                                GitHub
+                            </a>
+                            <a
+                                href="https://linkedin.com/in/yourprofile"
+                                target="_blank"
+                                className="px-5 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-900 transition flex items-center gap-2"
+                                rel="noreferrer"
+                            >
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Image */}
+                    <div className="flex justify-center md:justify-end">
+                        <img src={images.VhiSolo} alt="Vhianne Nicole Roman" className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-3xl shadow-2xl border-2 border-blue-500" />
                     </div>
                 </div>
             </section>
-            <section className="bg-blue-300 text-blue-900 py-8 z-10">
+
+            {/* Education */}
+            <section className="h-screen bg-blue-300 text-blue-900 py-8 z-10">
                 <div className="container mx-auto flex flex-col md:flex-row items-center max-w-9xl px-6 py-8">
                     <div className="w-full py-8">
                         <h2 className="text-3xl md:text-4xl font-semibold mt-8 mb-4 font-serif">Education</h2>
@@ -49,7 +82,9 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <section className="bg-blue-100 text-blue-900 py-8 z-10 font-serif">
+
+            {/* Work Experience */}
+            <section className="h-screen bg-blue-100 text-blue-900 py-8 z-10 font-serif">
                 <div className="container mx-auto flex flex-col md:flex-row items-center max-w-6xl px-6 py-8">
                     <div className="w-full py-8">
                         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Work Experience</h2>
