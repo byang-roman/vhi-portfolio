@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 const Home: React.FC = () => {
     return (
         <div>
-            <section className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${images.VhianneRoman})` }}>
+            <section className="min-h-screen w-full bg-cover bg-center relative" style={{ backgroundImage: `url(${images.VhianneRoman})` }}>
                 <div className="absolute top-0 left-0 w-full">
                     <Header />
                 </div>

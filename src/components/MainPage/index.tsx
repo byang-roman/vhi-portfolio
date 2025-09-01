@@ -3,6 +3,8 @@ import About from '../About';
 import Projects from '../Projects';
 import Skills from '../Skills';
 import Home from '../Home';
+import Education from '../Education';
+import Experience from '../Experience';
 
 const MainPage: React.FC = () => {
     return (
@@ -13,6 +15,14 @@ const MainPage: React.FC = () => {
 
             <section id="about">
                 <About />
+            </section>
+
+            <section id="education">
+                <Education />
+            </section>
+
+            <section id="experience">
+                <Experience />
             </section>
 
             <section id="projects">
