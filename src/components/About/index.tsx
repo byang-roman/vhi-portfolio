@@ -11,10 +11,7 @@ const About: React.FC = () => {
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6 text-gray-100">
                     {/* Text Content */}
                     <div>
-                        <h2 className="text-4xl font-serif font-semibold mb-6 relative inline-block text-white">
-                            About VHI
-                            <span className="absolute -bottom-2 left-0 w-48 h-1 bg-blue-500 rounded-full"></span>
-                        </h2>
+                        <h2 className="text-4xl font-serif font-semibold mb-6 relative inline-block text-white">About VHI</h2>
 
                         <p className="text-lg md:text-xl leading-relaxed mb-4 text-gray-300 text-justify">
                             I built a foundation in programming early on and strengthened it through college, working on practical projects that shaped my approach to development. I prioritize writing
