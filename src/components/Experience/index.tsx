@@ -2,11 +2,21 @@ import React from 'react';
 
 const Experience: React.FC = () => {
     return (
-        <section className="h-screen bg-blue-100 text-blue-900 py-8 z-10 font-serif">
-            <div className="container mx-auto flex flex-col md:flex-row items-center max-w-6xl px-6 py-8">
-                <div className="w-full py-8">
+        <section className="h-screen bg-blue-100 text-blue-900 z-10 font-serif">
+            <div className="container mx-auto flex flex-col md:flex-row items-center max-w-6xl px-6 py-4">
+                <div className="w-full">
                     <h2 className="text-3xl md:text-4xl font-semibold mb-4">Work Experience</h2>
                     <div className="mt-4">
+                        <div className="bg-white p-6 rounded-lg shadow-md border mb-4">
+                            <h3 className="text-xl md:text-2xl font-semibold mb-2">Trackerteer Web Development Corporation</h3>
+                            <p className="text-lg md:text-xl leading-relaxed mb-2">April 2024 - PRESENT</p>
+                            <ul className="list-disc pl-4 mt-2">
+                                <li className="text-lg md:text-xl leading-relaxed"></li>
+                                <li className="text-lg md:text-xl leading-relaxed"></li>
+                                <li className="text-lg md:text-xl leading-relaxed"></li>
+                                <li className="text-lg md:text-xl leading-relaxed"></li>
+                            </ul>
+                        </div>
                         <div className="bg-white p-6 rounded-lg shadow-md border mb-4">
                             <h3 className="text-xl md:text-2xl font-semibold mb-2">Software Engineer</h3>
                             <p className="text-lg md:text-xl leading-relaxed mb-2">July 2022 - February 2024</p>
