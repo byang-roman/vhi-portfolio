@@ -11,6 +11,7 @@ import ReduxIcon from '../assets/icons/redux.png';
 import SpringBootIcon from '../assets/icons/spring-boot.png';
 import LiquibaseIcon from '../assets/icons/liquibase.png';
 import TailwindCssIcon from '../assets/icons/tailwind-css.png';
+import JqueryIcon from '../assets/icons/jquery.png';
 
 const icons = {
     JavaScriptIcon,
@@ -25,7 +26,8 @@ const icons = {
     ReduxIcon,
     SpringBootIcon,
     LiquibaseIcon,
-    TailwindCssIcon
+    TailwindCssIcon,
+    JqueryIcon
 };
 
 export default icons;

@@ -3,44 +3,53 @@ import Header from '../Header';
 import images from '../../theme/images';
 import videos from '../../theme/videos.d';
 import ReactPlayer from 'react-player';
+import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
     const thesisProjects = [
         {
             title: 'School Website',
             description:
-                'A web application was developed using PHP and MySQL, serving to user roles including admin, guest, students, and teachers. With navigation features, users can seamlessly access sections such as home, accounts, forum, files, profile, and logout. As an assistant programmer, I contributed to the development of this dynamic platform, ensuring smooth functionality and a user-friendly interface.',
+                'A web application built using PHP and MySQL, with roles for admin, guest, students, and teachers. It includes smooth navigation between sections like home, forum, files, and accounts. As an assistant programmer, I helped build a dynamic and user-friendly platform.',
             type: 'screenshot',
             media: images.Grade10SchoolWebsite
         },
         {
             title: 'Assistive App for Visually Impaired People (AAVI)',
             description:
-                'AAVI is a user-friendly mobile app designed to assist individuals with visual impairments in navigating their digital environment effortlessly. It offers features such as text-to-speech functionality and a virtual box that reads text aloud in real-time. With AAVI, users can confidently engage with their devices, empowering them to access information and navigate their surroundings with ease.',
+                'AAVI is a user-friendly mobile app designed to assist visually impaired users with text-to-speech and real-time virtual box reading. It empowers users to navigate digital content seamlessly.',
             type: 'video',
             media: videos.AAVI
         }
     ];
 
     return (
-        <div>
+        <div className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 min-h-screen">
             <Header />
-            <section className="bg-white text-blue-900 py-8 z-10">
-                <div className="container mx-auto max-w-6xl px-6 py-8">
-                    <h1 className="text-4xl font-semibold mb-8 font-serif">Projects</h1>
-                    {thesisProjects.map((project, index) => (
-                        <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg mb-8">
-                            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-                            <p className="text-lg mb-4">{project.description}</p>
-                            {project.type === 'screenshot' ? (
-                                <img src={project.media} alt={project.title} className="w-full mb-4" style={{ maxWidth: '100%', height: 'auto' }} />
-                            ) : (
-                                <div className="flex justify-center">
-                                    <ReactPlayer url={project.media} controls width="25%" height="25%" />
+            <section className="py-16 text-white">
+                <div className="container mx-auto max-w-6xl px-6">
+                    <motion.h1 className="text-5xl font-serif font-bold mb-12 text-center" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                        Projects
+                    </motion.h1>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        {thesisProjects.map((project, index) => (
+                            <motion.div key={index} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+                                <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-md hover:shadow-lg transition-shadow p-6 flex flex-col h-full border border-gray-200">
+                                    <h2 className="text-2xl font-semibold mb-4 text-blue-800">{project.title}</h2>
+                                    <p className="text-base text-gray-700 mb-6 flex-grow">{project.description}</p>
+
+                                    {project.type === 'screenshot' ? (
+                                        <img src={project.media} alt={project.title} className="w-full rounded-lg shadow-md object-cover" />
+                                    ) : (
+                                        <div className="flex justify-center">
+                                            <ReactPlayer url={project.media} controls width="100%" height="240px" />
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                        </div>
-                    ))}
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </div>
